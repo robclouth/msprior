@@ -118,10 +118,10 @@ def main(argv):
         pl.callbacks.ModelCheckpoint(monitor="val_cross_entropy",
                                      filename='best'),
         pl.callbacks.ModelCheckpoint(filename='last'),
-        pl.callbacks.EarlyStopping(
-            "val_cross_entropy",
-            patience=20,
-        )
+        # pl.callbacks.EarlyStopping(
+        #     "val_cross_entropy",
+        #     patience=20,
+        # )
     ]
 
     if FLAGS.ema is not None:
